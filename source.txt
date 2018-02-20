@@ -1,0 +1,60 @@
+//Load this file using SourceCoder 3 (SC3): https://www.cemetech.net/sc/
+StoreGDB 0
+ZStandard
+ZSquare
+GridOff
+AxesOff
+LabelOff
+BorderColor 4
+BackgroundOff
+Line(~10,10,~10,~10,1,Black
+Line(Xmin,~10,Xmin,10,1,Black
+{~15,~15,~14,~14,~15->L1
+{~5,5,5,~5,~5->L2
+2.5
+For(A,0,Ans,Ans
+	For(X,1,4
+		Line(L1(X)+A,L2(X),A+L1(X+1),L2(X+1),1,Black
+	End
+End
+Pause 
+Lbl GD
+For(A,~9,~8,.2
+	Line(A,6,A,7.5
+End
+For(A,5,9,.2
+	Line(A,3,A,~9.5,1,LtGray
+	Line(~A,3,~A,~9.5,1,LtGray
+	Line(A,3.25,A,4,1,MedGray
+	Line(~A,3.25,~A,4,1,MedGray
+	If A=iPart(A
+	Then
+		9-A
+		Line(Ans,3.75,Ans,4,1,Gray,1
+		Line(~Ans,3.75,~Ans,4,1,Gray,1
+	End
+End
+Pause 
+Line(~5,4,5,4,1,MedGray,1
+Line(~5,3.5,5,3.5,1,MedGray,1
+Line(~5,4,~5,3.5,1,MedGray,1
+Line(5,4,5,3.5,1,MedGray,1
+Text(60,113,"ESSAY
+Line(~9,4.2,9,4.2,1,Gray,1
+Line(~9,5.1,9,5.1,1,LtGray,1
+0->rand
+For(X,3.25,3.5,.25
+	Line(~5,X,5,X,MedGray
+End
+For(X,58,207
+	If 5>remainder(X,10
+	Then
+		For(A,1,randInt(1,2
+			Pxl-On(47-randInt(2,5),X,DarkGray
+		End
+	End
+	If (X<120)(10>remainder(X,15
+	Then
+		Pxl-On(40-randInt(2,5),X,Black
+	End
+End
