@@ -5,56 +5,125 @@ ZSquare
 GridOff
 AxesOff
 LabelOff
-BorderColor 4
 BackgroundOff
-Line(~10,10,~10,~10,1,Black
-Line(Xmin,~10,Xmin,10,1,Black
-{~15,~15,~14,~14,~15->L1
+DelVar M10->N
+Line(~Ans,Ans,~Ans,~Ans,1,Black
+Line(Xmin,~Ans,Xmin,Ans,1,Black
+{0,0,1,1,0}-15->L1
 {~5,5,5,~5,~5->L2
+.2->Q
 2.5
 For(A,0,Ans,Ans
 	For(X,1,4
 		Line(L1(X)+A,L2(X),A+L1(X+1),L2(X+1),1,Black
 	End
 End
-Pause 
-Lbl GD
-For(A,~9,~8,.2
-	Line(A,6,A,7.5
-End
-For(A,5,9,.2
-	Line(A,3,A,~9.5,1,LtGray
-	Line(~A,3,~A,~9.5,1,LtGray
-	Line(A,3.25,A,4,1,MedGray
-	Line(~A,3.25,~A,4,1,MedGray
-	If A=iPart(A
+DelVar SDelVar HDelVar thetaDelVar Z
+While H<5
+	If not(S
 	Then
-		9-A
-		Line(Ans,3.75,Ans,4,1,Gray,1
-		Line(~Ans,3.75,~Ans,4,1,Gray,1
-	End
-End
-Pause 
-Line(~5,4,5,4,1,MedGray,1
-Line(~5,3.5,5,3.5,1,MedGray,1
-Line(~5,4,~5,3.5,1,MedGray,1
-Line(5,4,5,3.5,1,MedGray,1
-Text(60,113,"ESSAY
-Line(~9,4.2,9,4.2,1,Gray,1
-Line(~9,5.1,9,5.1,1,LtGray,1
-0->rand
-For(X,3.25,3.5,.25
-	Line(~5,X,5,X,MedGray
-End
-For(X,58,207
-	If 5>remainder(X,10
-	Then
-		For(A,1,randInt(1,2
-			Pxl-On(47-randInt(2,5),X,DarkGray
+		For(A,~9,~8,Q
+			Line(A,6,A,7.5
+		End
+		For(A,5,9,Q
+			Line(A,3,A,~9.5,1,LtGray
+			Line(~A,3,~A,~9.5,1,LtGray
+			3.25
+			Line(A,Ans,A,4,1,MedGray
+			Line(~A,Ans,~A,4,1,MedGray
+			If A=iPart(A
+			Then
+				9-A
+				Line(Ans,3.75,Ans,4,1,Gray,1
+				Line(~Ans,3.75,~Ans,4,1,Gray,1
+			End
+		End
+		3.5
+		Line(~5,4,5,4,1,MedGray,1
+		Line(~5,Ans,5,Ans,1,MedGray,1
+		Line(~5,4,~5,Ans,1,MedGray,1
+		Line(5,4,5,Ans,1,MedGray,1
+		Text(60,113,"ESSAY
+		Line(~9,4.2,9,4.2,1,Gray,1
+		Line(~9,5.1,9,5.1,1,LtGray,1
+		0->rand
+		For(X,4,4.2,Q
+			Line(~5,X,5,X,MedGray
+		End
+		For(X,58,207
+			If 5>remainder(X,10
+			Then
+				For(A,1,randInt(1,2
+					Pxl-On(47-randInt(2,5),X,DarkGray
+				End
+			End
+			If (X<120)(10>remainder(X,15
+			Then
+				Pxl-On(40-randInt(2,5),X,Black
+			End
+		End
+		0->rand
+		10->O
+		For(A,1,M
+			randInt(2,5->P
+			For(X,1,P
+				O+X
+				If rand<.75
+				Pxl-On(randInt(82,85)+6int(Ans/68),98+remainder(Ans,68),Black
+			End
+			O+P->O
+		End
+	Else
+		If S=1
+		Then
+			8.1->A
+			For(X,9,~9,~Q
+				Line(X,~9.5,X,8,1,DarkGray-12(X<~8
+				Line(X,8.1,X,9,1,Gray
+				If X<~5
+				Then
+					A+.1(X>=~6)-.1(X<=~8->A
+					Line(X,8.1,X,A,1,DarkGray
+				End
+			End
+			0->rand
+			For(X,18,160
+				If 5<remainder(X-18,10
+				Then
+					For(B,1,3
+						Pxl-On(X,59+randInt(1,3+3(X>120)),Gray
+					End
+				End
+			End
 		End
 	End
-	If (X<120)(10>remainder(X,15
+	S->T
+	getKey
+	Repeat S!=T
+		Repeat Ans
+			getKey
+		End
+		If not(S)(Ans=26
+		1->S
+		If (S=1)(Ans=24
+		DelVar S
+		If not(S)(Ans=105
+		Then
+			M+1->M
+			randInt(2,5->P
+			For(X,1,P
+				N+X
+				If rand<.75
+				Pxl-On(randInt(82,85)+6int(Ans/68),98+remainder(Ans,68),Black
+			End
+			N+X->N
+		End
+	End
+	If not(S
 	Then
-		Pxl-On(40-randInt(2,5),X,Black
+		For(A,~9,9,.2
+			Line(A,~10,A,10,0
+		End
 	End
 End
+RecallGDB 0
