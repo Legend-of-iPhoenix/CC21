@@ -1,12 +1,7 @@
 //Load this file using SourceCoder 3 (SC3): https://www.cemetech.net/sc/
 StoreGDB 0
-ZStandard
-ZSquare
-GridOff
-AxesOff
-LabelOff
+ZStandard : ZSquare : GridOff : AxesOff : LabelOff : BackgroundOff
 BorderColor 4
-BackgroundOff
 Line(~10,10,~10,~10,1,Black
 Line(Xmin,~10,Xmin,10,1,Black
 {~15,~15,~14,~14,~15->L1
