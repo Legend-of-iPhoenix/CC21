@@ -1,10 +1,72 @@
 StoreGDB 0
+PlotsOff 
+FnOff 
 ZStandard
 ZSquare
 GridOff
 AxesOff
 LabelOff
 BackgroundOff
+TextColor(Black
+"PROCRASTINATE->Str1
+Text(~1,50,50,Ans
+Text(80,60,"A GAME BY
+" 
+For(X,1,4
+	Ans+Ans
+End
+For(X,148,80,~2
+	Text(X+2,125,Ans
+	Text(X,125,"_iPho[|e][n]ix_
+End
+For(X,13,0,~1
+	For(A,0,2
+		TextColor(DarkGray-A
+		If X>A
+		Text(~1,50,38+12(X-A),sub(Str1,X-A,1
+	End
+End
+Repeat Ans
+	not(P->P
+	TextColor(Black-P
+	Text(150,50,"PRESS [ENTER] TO START!
+	getKey
+End
+If Ans!=91
+Then
+	ClrDraw
+	TextColor(Black
+	Text(137,1,"ENGLISH CLASS.
+	Text(150,1,"THE FRIDAY BEFORE VETERAN'S DAY
+	rand(500
+	ClrDraw
+	Line(Xmin,~3,Xmax,~3,1,Black
+	Circle(~5,3,1,Black
+	Line(~5,2,~5,~1,1,Black
+	For(X,~1,1,2
+		Line(~5,X,~6.5,X-2,1,Black
+		Line(~5,X,~3.5,2X-1,1,Black
+	End
+	Text(110,5,"ALL RIGHT, CLASS. I KNOW WE ARE ALL
+	Text(123,5,"EXCITED FOR THE UPCOMING HOLIDAY,
+	Text(136,5,"BUT WE HAVE TO GET THINGS DONE TODAY.
+	Text(149,5,"HERE'S A 12-PAGE ESSAY, DUE TUESDAY.
+	Pause 
+	{LtGray,MedGray,Gray,DarkGray,Black,DarkGray,Gray,MedGray,LtGray
+	For(X,1,dim(Ans
+		BackgroundOn Ans(X
+		ClrDraw
+	End
+	BackgroundOff
+	ClrDraw
+	Text(137,1,"YOUR LAPTOP.
+	Text(150,1,"MONDAY. VETERAN'S DAY.
+	rand(500
+End
+ClrDraw
+0->I%
+Text(5,4,"SCORE:
+Text(20,4,0
 DelVar M10->N
 Line(~Ans,Ans,~Ans,~Ans,1,Black
 Line(Xmin,~Ans,Xmin,Ans,1,Black
@@ -13,162 +75,250 @@ Line(Xmin,~Ans,Xmin,Ans,1,Black
 .2->Q
 2.5
 For(A,0,Ans,Ans
-  For(X,1,4
-    Line(L1(X)+A,L2(X),A+L1(X+1),L2(X+1),1,Black
-  End
+	For(X,1,4
+		Line(L1(X)+A,L2(X),A+L1(X+1),L2(X+1),1,Black
+	End
 End
-DelVar SDelVar HDelVar thetaDelVar ZDelVar T
+DelVar SDelVar HDelVar thetaDelVar ZDelVar T{0,~4.8->L6
+For(X,~4.8,0,Q
+	Line(~14.8,X,~14.2,X,Green
+End
 While H<5
-  If not(S
-  Then
-    For(A,~9,~8,Q
-      Line(A,6,A,7.5
-    End
-    For(A,5,9,Q
-      Line(A,3,A,~9.5,1,LtGray
-      Line(~A,3,~A,~9.5,1,LtGray
-      3.25
-      Line(A,Ans,A,4,1,MedGray
-      Line(~A,Ans,~A,4,1,MedGray
-      If A=iPart(A
-      Then
-        9-A
-        Line(Ans,3.75,Ans,4,1,Gray,1
-        Line(~Ans,3.75,~Ans,4,1,Gray,1
-      End
-    End
-    3.5
-    Line(~5,4,5,4,1,MedGray,1
-    Line(~5,Ans,5,Ans,1,MedGray,1
-    Line(~5,4,~5,Ans,1,MedGray,1
-    Line(5,4,5,Ans,1,MedGray,1
-    Text(60,113,"ESSAY
-    Line(~9,4.2,9,4.2,1,Gray,1
-    Line(~9,5.1,9,5.1,1,LtGray,1
-    0->rand
-    For(X,4,4.2,Q
-      Line(~5,X,5,X,MedGray
-    End
-    For(X,58,207
-      If 5>remainder(X,10
-      Then
-        For(A,1,randInt(1,2
-          Pxl-On(47-randInt(2,5),X,DarkGray
-        End
-      End
-      If (X<120)(10>remainder(X,15
-      Then
-        Pxl-On(40-randInt(2,5),X,Black
-      End
-    End
-    0->rand
-    10->O
-    For(A,1,M
-      randInt(2,5->P
-      For(X,1,P
-        O+X
-        If rand<.75
-        Pxl-On(randInt(82,85)+6int(Ans/68),98+remainder(Ans,68),Black
-      End
-      O+P->O
-    End
-  Else
-    If S=1
-    Then
-      8.1->A
-      For(X,9,~9,~Q
-        Line(X,~9.5,X,8,1,DarkGray-12(X<~7.8
-        Line(X,8.1,X,9,1,Gray
-        If X<~5
-        Then
-          A+.1(X>=~6)-.1(X<=~8->A
-          Line(X,8.1,X,A,1,DarkGray
-        End
-      End
-      0->rand
-      For(X,18,160
-        If remainder(X-18,6
-        Then
-          For(B,1,2
-            Pxl-On(X,59+randInt(1,3+3(X>72)),Gray
-          End
-        End
-      End
-    End
-  End
-  5->rand
-  0->|N
-  75->W
-  24->X
-  DelVar UWhite->R
-  S->V
-  getKey
-  Repeat S!=V
-    If (T>|N)(S=1
-    Then
-      For(theta,|N,T
-        If W>150 or rand<.05
-        Then
-          rand<.2
-          max(0,U+AnsrandInt(~1,1->U
-          5U+75->W
-          X+6->X
-        Else
-          W+1->W
-          If rand>.15
-          Then
-            Pxl-On(X-randInt(1,5),W,R
-          Else
-            {White,Blue,Orange,Green,LtBlue,Red,Yellow
-            Ans(1+remainder(max(0,randInt(~5,8)),7->R
-          End
-        End
-        If X>=150
-        Then
-          24->X
-          For(Z,~9,9,Q
-            Line(Z,~9.5,X,8,1,DarkGray-12(Z<~7.8
-          End
-          For(Z,18,160
-            If remainder(Z-18,6
-            Then
-              For(B,1,3
-                Pxl-On(Z,59+randInt(1,6),Gray
-              End
-            End
-          End
-        End
-        T->|N
-      End
-    End
-    Repeat Ans
-      getKey
-    End
-    Ans->K
-    If S=1
-    Then
-      T+(Ans=105->T
-      S(K!=24->S
-    End
-    If not(S)(K=26
-    1->S
-    If not(S)(K=105
-    Then
-      M+1->M
-      randInt(2,5->P
-      For(X,1,P
-        N+X
-        If rand<.75
-        Pxl-On(randInt(82,85)+6int(Ans/68),98+remainder(Ans,68),Black
-      End
-      N+X->N
-    End
-  End
-  If not(S
-  Then
-    For(A,~9,9,.2
-      Line(A,~10,A,10,0
-    End
-  End
+	If not(S
+	Then
+		For(A,~9,~8,Q
+			Line(A,6,A,7.5
+		End
+		For(A,5,9,Q
+			~9.5
+			Line(A,3,A,Ans,1,LtGray
+			Line(~A,3,~A,Ans,1,LtGray
+			3.25
+			Line(A,Ans,A,4,1,MedGray
+			Line(~A,Ans,~A,4,1,MedGray
+			If A=iPart(A
+			Then
+				9-A
+				Line(Ans,3.75,Ans,4,1,Gray,1
+				Line(~Ans,3.75,~Ans,4,1,Gray,1
+			End
+		End
+		3.5
+		Line(~5,4,5,4,1,MedGray,1
+		Line(~5,Ans,5,Ans,1,MedGray,1
+		Line(~5,4,~5,Ans,1,MedGray,1
+		Line(5,4,5,Ans,1,MedGray,1
+		Text(60,113,"ESSAY
+		Line(~9,4.2,9,4.2,1,Gray,1
+		Line(~9,5.1,9,5.1,1,LtGray,1
+		0->rand
+		For(X,4,4.2,Q
+			Line(~5,X,5,X,MedGray
+		End
+		For(X,58,207
+			If 5>remainder(X,10
+			Then
+				For(A,1,randInt(1,2
+					Pxl-On(47-randInt(2,5),X,DarkGray
+				End
+			End
+			If (X<120)(10>remainder(X,15
+			Then
+				Pxl-On(40-randInt(2,5),X,Black
+			End
+		End
+		0->rand
+		10->O
+		For(A,1,M
+			randInt(2,5->P
+			For(X,1,P
+				O+X
+				If rand<.75
+				Pxl-On(randInt(82,85)+6int(Ans/68),98+remainder(Ans,68),Black
+			End
+			O+P->O
+		End
+	Else
+		If S=1
+		Then
+			8.1->A
+			For(X,9,~9,~Q
+				Line(X,~9.5,X,8,1,DarkGray-12(X<~7.8
+				Line(X,8.1,X,9,1,Gray
+				If X<~5
+				Then
+					A+.1(X>=~6)-.1(X<=~8->A
+					Line(X,8.1,X,A,1,DarkGray
+				End
+			End
+			0->rand
+			For(X,18,160
+				If remainder(X-18,6
+				Then
+					For(B,1,2
+						Pxl-On(X,59+randInt(1,3+3(X>72)),Gray
+					End
+				End
+			End
+		Else
+			If S=~1
+			Then
+				Line(~9,8,9,8,1,Black,1
+				.75
+				For(X,~7,7,3
+					For(A,0,2Ans,2Ans
+						Line(~8+A,X-Ans,~8+A,X+Ans,1,MedGray,1
+						Line(~8,X-Ans+A,~8+2Ans,X-Ans+A,1,MedGray,1
+					End
+				End
+				210
+				Text(13,Ans,"SHOP
+				Text(27,Ans,"INFO:
+				Text(50,Ans,"OWNED:
+				Text(85,Ans,"COST:
+			End
+		End
+	End
+	5->rand
+	1->P
+	0->|N
+	75->W
+	24->X
+	DelVar UWhite->R
+	S->V
+	getKey
+	Repeat S!=V
+		If (T>|N)(S=1
+		Then
+			If T=|N+1
+			Then
+				20+int(30remainder(29T+37,39)/38
+				I%+Ans->I%
+				If Ans>1000
+				toString(iPart(Ans/10^(3int(log(Ans)/3))))+sub("kmbtqQ",iPart(log(Ans)/3),1
+				Text(20,4,Ans
+				L6(1)-.1->L6(1
+				Line(~14.8,Ans+.1,~14.2,Ans+.1,0
+			End
+			For(theta,|N,T
+				If W>150 or rand<.05
+				Then
+					rand<.2
+					max(0,U+AnsrandInt(~1,1->U
+					5U+75->W
+					X+6->X
+				Else
+					W+1->W
+					If rand>.15
+					Then
+						Pxl-On(X-randInt(1,5),W,R
+					Else
+						{White,Blue,Orange,Green,LtBlue,Red,Yellow
+						Ans(1+remainder(max(0,randInt(~5,8)),7->R
+					End
+				End
+				If X>=150
+				Then
+					24->X
+					For(Z,~9,9,Q
+						Line(Z,~9.5,X,8,1,DarkGray-12(Z<~7.8
+					End
+					For(Z,18,160
+						If remainder(Z-18,6
+						Then
+							For(B,1,3
+								Pxl-On(Z,59+randInt(1,6),Gray
+							End
+						End
+					End
+				End
+				T->|N
+			End
+		End
+		Repeat Ans
+			getKey
+		End
+		Ans->K
+		If S=1
+		Then
+			T+(Ans=105->T
+			K!=24->S
+			DelVar K
+		End
+		If S=~1
+		Then
+			~(K!=26->S
+			If K=34 or K=25
+			Then
+				For(Z,0,1
+					8-3P->X
+					.75
+					For(A,0,2Ans,2Ans
+						Line(~8+A,X-Ans,~8+A,X+Ans,1,MedGray+2Z,1
+						Line(~8,X-Ans+A,~8+2Ans,X-Ans+A,1,MedGray+2Z,1
+					End
+					If not(Z
+					min(5,max(1,P+(K=34)-(K=25->P
+				End
+				Text(65,210,L4(P
+				10*16^P
+				If Ans>1|E3
+				toString(iPart(Ans/10^(3int(log(Ans)/3))))+sub("km",iPart(log(Ans)/3),1
+				Text(100,210,Ans,"    
+			Else
+				If K=105
+				Then
+					If L4(P)<32 and I%>10(16^P
+					Then
+						I%-10(16^P->I%
+						If Ans>1|E3
+						toString(iPart(Ans/10^(3int(log(Ans)/3))))+sub("kmbtqQ",iPart(log(Ans)/3),1
+						Text(20,4,Ans,"     
+						1+L4(P->L4(P
+					Else
+						If 32=L4(P
+						Then
+							"YOU CANNOT HAVE MORE THAN 32 OF THAT ITEM!
+							Text(150,60,sub(Ans,1,20
+							Wait .5
+							For(X,1,length(Ans)-20
+								Text(150,60,sub(Ans,X,20),"       
+								Wait .1
+							End
+						Else
+							Text(150,60,"INSUFFICIENT FUNDS.
+						End
+					End
+				End
+			End
+			DelVar K
+		End
+		If not(S
+		Then
+			(K=26)-(K=24->S
+			If K=105
+			Then
+				L6+{.1,.05->L6
+				L6(1
+				Line(~14.8,Ans,~14.2,Ans,1,Green
+				L6(2
+				Line(~12.2,Ans,~11.6,Ans,1,Green
+				M+1->M
+				randInt(2,5->P
+				For(X,1,P
+					N+X
+					If rand<.75
+					Pxl-On(randInt(82,85)+6int(Ans/68),98+remainder(Ans,68),Black
+				End
+				N+X->N
+			End
+		End
+	End
+	If S<1
+	Then
+		For(A,~9,9+6not(S),Q
+			Line(A,~10,A,10,0
+		End
+	End
 End
 RecallGDB 0
